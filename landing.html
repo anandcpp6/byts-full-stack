@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="style.css">
+
+<body>
+    <header>
+     <nav id="container">
+        <nav onclick="GoTohome()"class="label">Home</nav>
+     <nav onclick="GoToPage1()"class="label">Add Sum</nav>
+     <nav onclick="GoToPage2()" class="label"> Stop Watch</nav>
+     <nav onclick="GoToPage3()"class="label"> Fahernheit</nav>
+     <nav onclick="GoToPage4()"class="label">Calculator</nav>
+     </nav>
+     </header> 
+     <h1> Task's Page</h1> 
+     <section>
+        <div></div>
+     </section> 
+     <script>
+         function GoTohome(){
+    window.location.href="landing.html";
+   }
+         function GoToPage1(){
+    window.location.href="Add.html";
+   }
+    function GoToPage2(){
+    window.location.href="stopwatch.htm";
+   }
+   function GoToPage3(){
+    window.location.href="fahrenheit.htm";
+   }
+    function GoToPage4(){
+    window.location.href="calculator.html";
+   }
+     </script>
+</body>
+</html>

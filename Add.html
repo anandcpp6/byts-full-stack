@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUM</title>
+    <style>
+        *{
+           
+            margin: 0px;
+        }
+   header{
+    background-color:black ;
+    color: white;
+    font-size: larger;
+    font-family: monospace;
+    height: 50px;
+    padding: 5px;
+
+  }
+#container:hover{
+    transform: scale(1.00);
+   color: bisque;
+}
+#container{
+    text-align: center;
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 10px;
+     cursor: pointer;
+}
+        #num1,#num2{
+            color: rgba(9, 32, 44, 0.905);
+            background-color: rgba(200, 201, 227, 0.84);
+            border:none;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+            border-radius: 5px;
+            outline: none;
+             font-weight: 600;
+            font-size: larger;
+            font-family: sans-serif;
+            
+        }
+        #btn{
+           color: rgba(9, 32, 44, 0.905);
+            background-color: rgb(255, 0, 0);
+            border:none;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            border-radius: 5px;
+            width:200px; 
+            cursor: pointer;
+             font-weight: 600;
+            font-size: larger;
+            font-family: sans-serif;
+        }
+  .r{
+   
+    margin-top: 30px;
+    font-weight: 1000;
+    color: rgba(235, 236, 226, 0.936);
+     font-weight: 600;
+            font-size: larger;
+            font-family: sans-serif;
+  }
+        body{
+    background: #914ecc;
+    background: linear-gradient(90deg,rgba(145, 78, 204, 1) 0%, rgba(9, 9, 121, 1) 100%, rgba(0, 212, 255, 1) 100%);
+}
+    </style>
+</head>
+<body>
+   <header>
+        <nav id="container">
+      <nav onclick="GoTohome()"class="label">Home</nav>
+     <nav onclick="GoToPage1()"class="label">Add Sum</nav>
+     <nav onclick="GoToPage2()" class="label"> Stop Watch</nav>
+     <nav onclick="GoToPage3()"class="label"> Fahernheit</nav>
+     <nav onclick="GoToPage4()"class="label">Calculator</nav>
+     </nav>
+     </header>  
+    <center>
+    <nav>
+   <input id="num1" placeholder="Number" type="number">
+   <input id="num2" placeholder="Number" type="number">
+   </nav>
+   <nav id="addbtn">
+   <button  id="btn" onclick="change()">ADD</button>
+   </nav>
+   <p class="r" id="result">Result <strong>:</strong></p>
+   
+   <script>
+   
+    function change(){
+        var n1=document.getElementById("num1")
+    var n2=document.getElementById("num2")
+    var res=document.getElementById("result")
+    var sum1=Number(n1.value)
+    var sum2=Number(n2.value)
+    var sum3=sum1+sum2;
+        result.textContent=`RESULT : ${sum3}`;
+    }
+   </script>
+   
+   </center>
+   <script>
+         function GoTohome(){
+    window.location.href="landing.html";
+   }
+         function GoToPage1(){
+    window.location.href="Add.html";
+   }
+    function GoToPage2(){
+    window.location.href="stopwatch.htm";
+   }
+   function GoToPage3(){
+    window.location.href="fahrenheit.htm";
+   }
+    function GoToPage4(){
+    window.location.href="calculator.html";
+   }
+     </script>
+</body>
+</html>

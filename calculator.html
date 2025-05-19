@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-widthinitial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+            body{
+                background-color: rgb(227, 221, 221);
+                margin: 0px;
+            }
+         header{
+    background-color:black ;
+    color: white;
+    font-size: larger;
+    font-family: monospace;
+    height: 50px;
+    padding: 5px;
+
+  }
+#container:hover{
+    transform: scale(1.00);
+   color: bisque;
+}
+#container{
+    text-align: center;
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 10px;
+     cursor: pointer;
+}
+            #container1{
+                width:50%;
+                height:100%;
+                
+            }
+
+            #inputbox{
+            padding:20px;
+            border: none;
+            background-color: rgb(58, 57, 57);
+            width:350px;
+            height:550px;
+            border-radius: 10px;
+            margin-top: 20px;
+            }
+            .size{
+                width:50px;
+                height:50px;
+                font-weight: 500;
+                border-radius: 50%;
+                background-color: rgb(170, 170, 165);
+                border:none;
+                border-color: grey;
+                cursor: pointer;
+                padding: 10px;
+                margin: 10px;
+            }
+            .size:hover{
+                transform: scale(1);
+                background-color: rgb(29, 27, 22);
+                color:white;
+            }
+            #input{
+                color:white;
+                font-size: 50px;
+                margin-top: 3%;
+                margin-bottom: 3%;
+                padding :8px;
+                width:280px;
+                height:80px;
+                text-align: right;
+                border-radius: 8%;
+                background-color:gray ;
+                outline: none;
+            }
+        </style>
+</head>
+<body>
+    <header><nav id="container">
+        <nav onclick="GoTohome()"class="label">Home</nav>
+     <nav onclick="GoToPage1()"class="label">Add Sum</nav>
+     <nav onclick="GoToPage2()" class="label"> Stop Watch</nav>
+     <nav onclick="GoToPage3()"class="label"> Fahernheit</nav>
+     <nav onclick="GoToPage4()"class="label">Calculator</nav>
+     </nav>
+     </header> 
+    <center>
+    <section id="container1">
+     <center>
+    <div id="inputbox">
+        <h1 style="color:azure;letter-spacing: 2px;font-style:oblique;">Casio</h1>
+        <input type="text" id='input'>
+        <table>
+            <tr>
+        <td><button class="size" onclick="clearall()">Ac</button></td>
+        <td><button class="size" onclick="backspace()"><strong><<-</strong></button></td>
+         <td><button class="size" onclick="append('%')"><strong>%<strong></button></td>
+        <td><button style="background-color: aquamarine;" class="size" onclick="calculate()"><strong>=</strong></button></td>
+        </tr>
+        <tr>
+        <td><button class="size" onclick="append('1')">1</button></td>
+        <td><button class="size" onclick="append('2')">2</button></td>
+        <td><button class="size" onclick="append('3')">3</button></td>
+        <td><button class="size" onclick="append('+')"><strong>+<strong></button></td>
+        </tr>
+        <tr>
+        <td><button class="size" onclick="append('4')">4</button></td>
+        <td><button class="size" onclick="append('5')">5</button></td>
+        <td><button class="size" onclick="append('6')">6</button></td>
+        <td><button class="size" onclick="append('-')"><strong>-<strong></button></td>
+        </tr>
+        <tr>
+        <td><button class="size" onclick="append('7')">7</button></td>
+        <td> <button class="size" onclick="append('8')">8</button></td>
+        <td> <button class="size" onclick="append('9')">9</button></td>
+        <td><button class="size" onclick="append('*')"><strong>x<strong></button></td>
+        </tr>
+        <tr>
+        <td><button class="size" onclick="append('00')">00</button></td>
+        <td> <button class="size" onclick="append('0')">0</button></td>
+        <td> <button class="size" onclick="append('.')"><strong>.</strong></button></td>
+        <td><button class="size" onclick="append('/')"><strong>/<strong></button></td>
+        </tr>
+   </table>
+   </div>
+</center>
+   </section>
+   </center>
+   <script>
+    function append(val){
+        document.getElementById('input').value +=val;
+    }
+    function clearall(){
+        document.getElementById('input').value='';
+    }
+    function backspace(){
+      const input1=document.getElementById('input');
+      input1.value=input1.value.slice(0,-1);
+    }
+    function calculate(){
+        const input1 = document.getElementById('input');
+        try {
+            input1.value = eval(input1.value);
+        } catch {
+        confirm("invalid Expression");
+        }
+    }
+   </script>
+     <script>
+         function GoTohome(){
+    window.location.href="landing.html";
+   }
+         function GoToPage1(){
+    window.location.href="Add.html";
+   }
+    function GoToPage2(){
+    window.location.href="stopwatch.htm";
+   }
+   function GoToPage3(){
+    window.location.href="fahrenheit.htm";
+   }
+    function GoToPage4(){
+    window.location.href="calculator.html";
+   }
+     </script>
+</body>
+</html>

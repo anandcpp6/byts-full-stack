@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+    background-color:black ;
+    color: white;
+    font-size: larger;
+    font-family: monospace;
+    height: 50px;
+    padding: 5px;
+
+  }
+#container:hover{
+    transform: scale(1.00);
+   color: bisque;
+}
+#container{
+    text-align: center;
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 10px;
+     cursor: pointer;
+}
+    #btn{
+        background-color: rgb(58, 18, 167);
+        color: aliceblue;
+        padding: 10px;
+        padding-left:50px;
+        padding-right: 50px;
+        margin-top: 10px;
+        font-size: x-large;
+    }
+    #fahren{
+        font-family: monospace;
+        font-size: larger;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+         margin-top: 25px;
+         color: aliceblue;
+    }
+    #output{
+        border: none;
+        font-size: 900;
+        color: rgb(236, 231, 231);
+        width: fit-content;
+        margin-right: 260px;
+        border-radius: 10px;
+    }
+    #A{
+        font-family: monospace;
+        font-size: xx-large;
+        
+        padding-left: 10px;
+        padding-right: 10px;
+        border: none;
+    }
+    body{
+       background: #5a0980;
+background: linear-gradient(90deg, rgba(90, 9, 128, 1) 0%, rgba(55, 55, 110, 1) 25%, rgba(15, 92, 110, 1) 83%, rgba(21, 174, 212, 1) 100%);
+margin: 0px;
+    }
+    section{
+        margin: auto;
+        font-size: xx-large;
+        margin-top: 50px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="container">
+        <nav onclick="GoTohome()"class="label">Home</nav>
+     <nav onclick="GoToPage1()"class="label">Add Sum</nav>
+     <nav onclick="GoToPage2()" class="label"> Stop Watch</nav>
+     <nav onclick="GoToPage3()"class="label"> Fahernheit</nav>
+     <nav onclick="GoToPage4()"class="label">Calculator</nav>
+     </nav>
+     </header>  
+    </header>
+    <center>
+    <section>
+    <label  id="fahren" for="fahrenheit">Fahrenheit : </label>
+    <input type="number" id="A">
+    <br>
+    <p id="output">Celsius : </p>
+    <br>
+    <button id="btn" onclick="convert()">Convert</button>
+    </section>
+    <script>
+        function convert(){
+        var a=parseFloat(document.getElementById("A").value);
+        var b=((a-32)*(5/9));
+        document.getElementById("output").innerText=`Celsius : ${b}`;
+        }
+    </script>
+      <script>
+         function GoTohome(){
+    window.location.href="landing.html";
+   }
+         function GoToPage1(){
+    window.location.href="Add.html";
+   }
+    function GoToPage2(){
+    window.location.href="stopwatch.htm";
+   }
+   function GoToPage3(){
+    window.location.href="fahrenheit.htm";
+   }
+    function GoToPage4(){
+    window.location.href="calculator.html";
+   }
+     </script>
+</center>
+</body>
+</html>
